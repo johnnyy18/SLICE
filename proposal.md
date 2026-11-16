@@ -1,46 +1,62 @@
-# Spade For After Effects
+# SLICE
 
 ## Repository
-https://github.com/johnnyy18/spade
+https://github.com/johnnyy18/SLICE
 
 ## Description
-Spade is an intuitive UI-based extension that automates repetitive actions inside After Effects. Spade streamlines inefficient workflows, allowing Motion Designers to build compositions faster.
+SLICE is an intuitive UI-based application that helps video editors trim clips faster. SLICE strives to streamline video trimming for the FUTURE of video editing!
 
 ## Features
-- New Layer Shortcuts
-  - Various buttons are easily accessible straight from the UI panel. Upon clicking the designated layer type, a new layer will be automatically created in your timeline.
-- Auto-trim
-  - If you are currently selecting a layer, newly created layers will be trimmed to its size. This is only executed if an existing layer is selected.
-- Auto-parent
-  - If you create an empty null, it will be automatically parented to a selected layer. This is only executed for null objects and if an existing layer is selected.
-- Layer Sequencing
-  - Selecting multiple layers and executing this command will automatically sequence layers based on an operation (Those being top-to-bottom or bottom-to-top)
+- Video Preview
+  -  Displays a live preview of the video according to the desired length
+- Trimming
+  - A slider will be available to trim the video to your desired length. A 'start' and end' duration text box will also be available to type a specific duration
+- Frame skipping
+  - Using the left and right arrow keys will allow you to step forward or backwards one frame
+- Export location
+  - Select a file location to save the clip
+- Miscellaneous keybinds
+  - RIGHT ARROW | Shift one frame forward
+  - LEFT ARROW | Shift one frame backward
+  - SPACE | Play/Pause
+  - CTRL + S | Save file
 
 ## Challenges
-- For this project specifically, because Python does not natively control After Effects, I will most likely have to use JavaScript or alternative libraries like PySide6 and PyAutoGUI for the interactive elements.
-- Depending on the route taken, I will need to use ExtendScript, Adobe CEP, HTML, and JavaScript.
+- Creating a user-friendly interface
+- Creating a live preview for the video to be displayed
+- Translating the trim slider to dynamically update the live preview
 
 ## Outcomes
 Ideal Outcome:
 
 ### Ideal Outcome
-- Execute all commands quickly and more efficiently than navigating through the window menus
-- All commands do not break
+- Live preview works with minimal stuttering
+- Trim slider works with precise durations
+- Frame skipping functions properly
+- Keybind shortcuts all work
 
 ### Minimal Viable Outcome
-- New Layer shortcuts work without the auto trim function or the auto parenting features
-- Layer Sequencing works without the operation-based direction
+- No live preview, but a preview before rendering.
+- Just text boxes to adjust start/end duration
+- Play/Pause and Save file keybinds work
 
 ## Milestones
 
 ### Week 1
-- Complete the basic logic structure
-- Start UI building and user interaction
+- Set up the Python environment
+- Build the window and interface
+- Create a video import function
+- Create a live preview with a timestamp
+- Implement playback controls (Setting up Play/Pause Keybinds)
 
 ### Week 2
-- Complete the structure for the user interface
-- Complete the layer modification and After Effects communication
+- Create the structure for the trim slider
+- Add start/end duration selection
+- Add frame skipping controls and logic
+- Create the export function, file location, and export keybind
+- Implement trimming
 
 ### Week 3 (Final)
-- Final Test
-- Troubleshooting and bug fixing
+- Test different video formats
+- Troubleshoot frame accuracy
+- Troubleshoot any errors regarding file type, package errors, inaccurate trimming, unsupported formats, or inconsistent frame rates.
